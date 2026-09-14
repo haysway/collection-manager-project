@@ -5,3 +5,9 @@
 label {
   display: block;
 }
+
+.form-control label{
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px;
+}

@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div>
-      <h1>Temp title</h1>
+      <h1>Album Collection</h1>
 
       <NewAlbum onAddAlbum={addAlbumHandler}/>
     </div>

@@ -1,9 +1,21 @@
 import AlbumCard from "./AlbumCard";
+import AlbumFilter from "./AlbumFilter";
 
 function AlbumList(props) {
     return (
         <div className="card">
             <h2>Albums</h2>
+
+            <AlbumFilter
+                artistFilter={props.artistFilter}
+                onArtistChange={props.onArtistChange}
+                genreFilter={props.genreFilter}
+                onGenreChange={props.onGenreChange}
+                ownedFilter={props.ownedFilter}
+                onOwnedChange={props.onOwnedChange}
+                formatFilter={props.formatFilter}
+                onFormatChange={props.onFormatChange}
+            />
 
             {
                 props.items.length === 0 ? (

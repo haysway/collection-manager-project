@@ -6,7 +6,7 @@ function AlbumCard(props) {
             <p>Release Date: {props.date}</p>
             <p>Genres: {props.genres.join(', ')}</p>
             <p>Record Label: {props.label}</p>
-            <p>owned: {props.owned ? 'Yes' : 'No'}</p>
+            <p>Owned: {props.owned ? 'Yes' : 'No'}</p>
             {props.owned && (
                 <p>Formats: {props.formats.join(', ')}</p>
             )}

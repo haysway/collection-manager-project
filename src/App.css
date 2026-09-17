@@ -65,6 +65,31 @@ label {
   margin: 0.25rem 0;
 }
 
+/* Album filters */
+
+.album-filter {
+  margin-bottom: 1rem;
+}
+
+.album-filter label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.album-filter input[type="text"],
+.album-filter select {
+  margin-left: 0.4rem;
+  padding: 0.4rem;
+
+  background-color: var(--dark-slate-grey-2);
+  color: var(--dusty-taupe);
+
+  border: 1px solid var(--dusty-taupe);
+  border-radius: 4px;
+}
+
 /* Text and date inputs */
 
 input[type="text"],

@@ -121,6 +121,12 @@ input[type="radio"] {
   margin-right: 5px;
 }
 
+/* error */
+.form-error {
+  color: var(--dusty-rose);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 
 /* Button */
 

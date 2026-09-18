@@ -18,6 +18,8 @@ function AlbumForm(props) {
     const [enteredOwned, setEnteredOwned] = useState(false);
     const [enteredFormat, setEnteredFormat] = useState([]);
 
+    const [error, setError] = useState('');
+
     const genres = [
         'Rock',
         'Alternative',
@@ -38,6 +40,26 @@ function AlbumForm(props) {
 
     const submitHandler = (event) => {
         event.preventDefault();
+        
+        // check for standard error
+        if (
+            enteredName.trim() === '' ||
+            enteredArtist.trim() === '' ||
+            enteredDate === '' ||
+            enteredGenres.length === 0 ||
+            enteredLabel.trim() === ''
+        ) {
+            setError('Please fill out all required fields.');
+            return;
+        }
+        
+        // check for missing format selection if owned is true
+        if (enteredOwned && enteredFormat.length === 0) {
+            setError('Please select at least one format for an owned album.');
+            return;
+        }
+
+        setError('');
 
         const albumData = {
             name: enteredName,
@@ -177,6 +199,8 @@ function AlbumForm(props) {
                     ))}           
                 </div>
             )}
+
+            {error && <p className="form-error">{error}</p>}
 
             <button type="submit">Add Album</button>
         </form>

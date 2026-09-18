@@ -24,6 +24,7 @@ function AlbumList(props) {
                     props.items.map((album) => (
                         <AlbumCard
                             key={album.id}
+                            id={album.id}
                             name={album.name}
                             artist={album.artist}
                             date={album.date}
@@ -31,6 +32,7 @@ function AlbumList(props) {
                             label={album.label}
                             owned={album.owned}
                             formats={album.formats}
+                            onDelete={props.onDeleteAlbum}
                         />
                     ))
                 )

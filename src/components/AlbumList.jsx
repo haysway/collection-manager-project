@@ -15,6 +15,8 @@ function AlbumList(props) {
                 onOwnedChange={props.onOwnedChange}
                 formatFilter={props.formatFilter}
                 onFormatChange={props.onFormatChange}
+                favoriteFilter={props.favoriteFilter}
+                onFavoriteChange={props.onFavoriteChange}
             />
 
             {
@@ -32,7 +34,9 @@ function AlbumList(props) {
                             label={album.label}
                             owned={album.owned}
                             formats={album.formats}
+                            favorite={album.favorite}
                             onDelete={props.onDeleteAlbum}
+                            onFavorite={props.onFavoriteAlbum}
                         />
                     ))
                 )

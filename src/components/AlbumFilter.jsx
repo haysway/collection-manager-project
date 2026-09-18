@@ -66,6 +66,15 @@ function AlbumFilter(props) {
                     ))}
                 </select>
             </label>
+
+            <label>
+                Favorited:
+                <input
+                    type="checkbox"
+                    checked={props.favoriteFilter}
+                    onChange={(e) => props.onFavoriteChange(e.target.checked)}
+                />
+            </label>
         </div>
     );
 }

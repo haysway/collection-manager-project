@@ -12,6 +12,15 @@ function AlbumCard(props) {
             {props.owned && (
                 <p>Formats: {props.formats.join(', ')}</p>
             )}
+
+            <button onClick={(e) => {
+                // I had to research to find out how to not also delete
+                // the album by clicking on the favorite button
+                // stop propogation prevents the click from reaching the card
+                 e.stopPropagation();
+                 props.onFavorite(props.id)}}>
+                {props.favorite ? '★ Favorited' : '☆ Favorite'}
+            </button>
         </div>
     );
 }

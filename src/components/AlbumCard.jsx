@@ -13,6 +13,7 @@ function AlbumCard(props) {
                 <p>Formats: {props.formats.join(', ')}</p>
             )}
 
+            New
             <button onClick={(e) => {
                 // I had to research to find out how to not also delete
                 // the album by clicking on the favorite button
